@@ -4,7 +4,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Create A New Post | YCDSocial</title>
+	<title>Create A New Post | replBook</title>
 	<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
 	 crossorigin="anonymous" />
 </head>
@@ -77,13 +77,13 @@
 		}
 	</style>
 
-	<h1><i class="fad fa-plus-circle orange"></i> Create A New post</h1>
+	<h1>Create A New post</h1>
 
 	<form action="/creation/create" method="POST">
 		<input type="text" placeholder="Name of post" name="title" maxlength="255" autocomplete="off" required />
       <!--23-->
       <br /><hr />
-      <input style="height: 100px; width: 300px" type="text" placeholder="Subtitle/author" name="author" maxlength="40" autocomplete="name" required />
+      <input style="height: 25px; width: 300px" type="text" placeholder="Subtitle/author" name="author" maxlength="40" autocomplete="name" required />
       
 			
 			
@@ -91,6 +91,7 @@
 
 			<div class="form-group">
 				<input class="form-control" type="password" placeholder="Password For Editing" name="password" autocomplete="new-password" required />
+				<br>
 				<input class="form-control" type="password" placeholder="Confirm Password" name="password2" utocomplete="new-password" required />
 			</div>
       <br /><hr />
@@ -102,7 +103,7 @@
         <option value="private">Private</option>
       </select>
       <br /><hr />
-      <input type="submit" value="Publish post" /><br>
+      <input type="submit" value="Publish" /><br>
       <br /><hr />
       <textarea placeholder="Write your post!" name="doc-content"></textarea>
     </form>

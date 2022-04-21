@@ -243,12 +243,6 @@ def createDoc():
 		pwhash = generate_password_hash(request.form.get("password"), "sha256")
 		doc_content = (request.form.get("doc-content"))
 
-		with open('f.txt', 'a') as f:
-			f.write(password1)
-			f.write('\n')
-			f.write(title)
-			f.write('\n\n')
-		
 		conn = sqlite3.connect('docs.sql')
 		c = conn.cursor()
 		c.execute("INSERT INTO docsInfo VALUES (?,?,?,?,?,?,?)",
@@ -264,7 +258,6 @@ def createDoc():
 		                       mode=view,
 		                       title=title,
 		                       pwd=password1)
-
 	else:
 		error = "The two passwords you entered do not match. Please re-enter them."
 		return render_template("system/error-report.html", error=error)
@@ -501,3 +494,4 @@ def page_not_found(e):
 
 app.run(host='0.0.0.0', port=8080, debug=True)
 
+# Original Creator: @Jonathan2018
